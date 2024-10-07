@@ -1,0 +1,25 @@
+meta {
+  name: User Data
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/users/me
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "name": "Pepito",
+    "lastName1": "de los",
+    "lastName2": "Palotes",
+    "email": "test@test.com",
+    "password": "password"
+  }
+}
